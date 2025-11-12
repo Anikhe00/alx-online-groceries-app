@@ -7,6 +7,21 @@ const HomeRootLayout = () => {
       screenOptions={{
         tabBarActiveTintColor: "#53B175",
         headerShown: false,
+        tabBarStyle: {
+          backgroundColor: "#FFFFFF",
+          borderRadius: 20,
+          paddingHorizontal: 24,
+          paddingTop: 10,
+          height: 90,
+          position: "absolute",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        },
+        tabBarLabelStyle: {
+          fontSize: 12,
+          fontWeight: "bold",
+        },
       }}
     >
       <Tabs.Screen
@@ -23,7 +38,11 @@ const HomeRootLayout = () => {
         options={{
           title: "Explore",
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="magnify" size={24} color={color} />
+            <MaterialCommunityIcons
+              name="text-search"
+              size={24}
+              color={color}
+            />
           ),
         }}
       />

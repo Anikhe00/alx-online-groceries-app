@@ -1,4 +1,6 @@
+import Ionicons from "@expo/vector-icons/Ionicons";
 import { Image, StyleSheet, Text, View } from "react-native";
+import Button from "./button";
 
 const ProductCard = ({
   title,
@@ -20,6 +22,9 @@ const ProductCard = ({
       </View>
       <View>
         <Text style={styles.productPrice}>${price}</Text>
+        <Button>
+          <Ionicons name="add" size={24} color="white" />
+        </Button>
       </View>
     </View>
   );

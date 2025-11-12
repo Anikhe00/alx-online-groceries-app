@@ -8,7 +8,7 @@ export interface InputFieldProps {
 }
 
 export interface ButtonProps {
-  title: string;
-  onPress: () => void;
+  title?: string;
+  onPress?: () => void;
   children: ReactNode;
 }
