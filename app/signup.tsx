@@ -1,7 +1,8 @@
+import Button from "@/components/button";
 import InputField from "@/components/inputField";
 import { useRouter } from "expo-router";
 import { useState } from "react";
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 
 export default function SignUp() {
   const [username, setUsername] = useState("");
@@ -40,12 +41,9 @@ export default function SignUp() {
       </View>
 
       <View style={styles.buttonGroup}>
-        <TouchableOpacity
-          style={styles.button}
-          onPress={() => router.push("/(home)")}
-        >
+        <Button title="Sign Up" onPress={() => router.replace("/(home)")}>
           <Text style={styles.buttonText}>Sign Up</Text>
-        </TouchableOpacity>
+        </Button>
 
         <View style={styles.textGroupCenter}>
           <Text style={styles.caption}>Already have an account?</Text>

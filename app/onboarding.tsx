@@ -1,16 +1,9 @@
+import Button from "@/components/button";
 import { useRouter } from "expo-router";
-import {
-  Image,
-  ImageBackground,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from "react-native";
+import { Image, ImageBackground, StyleSheet, Text, View } from "react-native";
 
 export default function Onboarding() {
   const router = useRouter();
-
   return (
     <View style={styles.container}>
       <ImageBackground
@@ -31,12 +24,9 @@ export default function Onboarding() {
             </Text>
           </View>
 
-          <TouchableOpacity
-            style={styles.button}
-            onPress={() => router.push("/signup")}
-          >
+          <Button title="Get Started" onPress={() => router.replace("/signup")}>
             <Text style={styles.buttonText}>Get Started</Text>
-          </TouchableOpacity>
+          </Button>
         </View>
       </ImageBackground>
     </View>

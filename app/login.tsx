@@ -1,7 +1,8 @@
+import Button from "@/components/button";
 import InputField from "@/components/inputField";
 import { useRouter } from "expo-router";
 import { useState } from "react";
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -34,12 +35,9 @@ const Login = () => {
       </View>
 
       <View style={styles.buttonGroup}>
-        <TouchableOpacity
-          style={styles.button}
-          onPress={() => router.push("/(home)")}
-        >
-          <Text style={styles.buttonText}>Sign Up</Text>
-        </TouchableOpacity>
+        <Button title="Login" onPress={() => router.replace("/(home)")}>
+          <Text style={styles.buttonText}>Login</Text>
+        </Button>
 
         <View style={styles.textGroupCenter}>
           <Text style={styles.caption}>Dont have an account?</Text>

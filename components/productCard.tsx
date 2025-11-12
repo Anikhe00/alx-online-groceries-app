@@ -4,16 +4,23 @@ const ProductCard = ({
   title,
   price,
   image,
+  quantity,
 }: {
   title: string;
+  quantity: string;
   price: number;
   image: string;
 }) => {
   return (
     <View style={styles.productCard}>
       <Image source={{ uri: image }} style={styles.productImage} />
-      <Text style={styles.productTitle}>{title}</Text>
-      <Text style={styles.productPrice}>${price}</Text>
+      <View>
+        <Text style={styles.productTitle}>{title}</Text>
+        <Text style={styles.productPrice}>{quantity}</Text>
+      </View>
+      <View>
+        <Text style={styles.productPrice}>${price}</Text>
+      </View>
     </View>
   );
 };
@@ -42,3 +49,5 @@ const styles = StyleSheet.create({
     color: "#7C7C7C",
   },
 });
+
+export default ProductCard;

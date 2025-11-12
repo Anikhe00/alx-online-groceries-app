@@ -1,12 +1,12 @@
 import { StyleSheet, Text, TextInput, View } from "react-native";
-import { inputFieldProps } from "../interfaces";
+import { InputFieldProps } from "../interfaces";
 
 export default function InputField({
   title,
   placeholder,
   value,
   onChangeText,
-}: inputFieldProps) {
+}: InputFieldProps) {
   return (
     <View style={styles.inputGroup}>
       <Text style={styles.body}>{title}</Text>
